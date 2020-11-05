@@ -86,7 +86,7 @@
 .save-email input:checked + .checkbox {
   background-image: url(../images/icon-checked-square.svg);
 }
-.save-email. label {
+.save-email label {
   margin-left: .5em;
   cursor: pointer;
 }
