@@ -9,6 +9,7 @@
   margin-top: 20px;
   width: 100%;
   height: 400px;
+  position: relative;
 }
 .ediya-menu__item:first-child {
   margin-top: 0;
@@ -28,6 +29,62 @@
 }
 .ediya-menu__item [role="button"]:hover img {
   transform: scale(1);
+}
+
+/* 공통 음료 상세 정보 */
+.ediya-menu__item--detail {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.5);
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  padding: 24px 16px;
+  border: 1px solid #0f0f0f;
+}
+.ediya-menu__item--name {
+  margin: 18px 0;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #0f0f0f;
+  font-size: 1.8rem;
+  color: #202022;
+  font-weight: 400;
+}
+.ediya-menu__item--name [lang="en"] {
+  display: block;
+  font-size: 1.4rem;
+  color: #878787;
+}
+.ediya-menu__item--multi-column {
+  column-count: 2;
+  column-rule: 1px solid currentColor;
+  font-size: 1.3rem;
+  background: #eee;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 16px;
+}
+dl, dt, dd {
+  margin: 0;
+  padding: 0;
+}
+.ediya-menu__item--multi-column dl {
+  display: flex;
+  flex-flow: row wrap;
+}
+.ediya-menu__item--multi-column dt {
+  flex-basis: 50%;
+}
+.ediya-menu__item--detail .button {
+  position: absolute;
+  cursor: pointer;
+  top: 20px;
+  right: 20px;
+  background-color: transparent;
+  border: none;
 }
 
 @media all and (min-width: 768px) {
