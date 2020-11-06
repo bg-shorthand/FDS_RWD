@@ -139,12 +139,12 @@
   .press-thumbnail {
     display: none;
   }
-  .press-article dt,
+  /* .press-article dt,
   .press-article dd {
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
-  }
+  } */
 }
 
 /* 데스크탑 공지사항 */
