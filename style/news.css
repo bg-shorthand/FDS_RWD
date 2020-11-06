@@ -60,22 +60,24 @@
   height: 100%;
   background: url(../images/icon-search.svg) no-repeat 0 0 / 100% 100%;
 }
+/* 공통 테이블 데이터 */
 .news__press-table {
   border-top: 2px solid darkblue;
   border-bottom: 2px solid darkblue;
   text-align: center;
+  border-spacing: 0;
   border-collapse: collapse;
 }
-.news__press-table thead tr th:first-child {
+.news__press-table th:first-child {
   width: 4em;
   padding: 15px 5px;
 }
-.news__press-table tr td:nth-child(1),
-.news__press-table tr td:nth-child(3) {
+.news__press-table td:nth-child(1),
+.news__press-table td:nth-child(3) {
   font-size: 1.4rem;
   font-weight: 100;
 }
-.news__press-table tr td:nth-child(2) {
+.news__press-table td:nth-child(2) {
   text-align: left;
 }
 .news__press-table td {
@@ -86,17 +88,34 @@
   font-size: 1.4rem;
   color: #24388d;
   font-weight: 700;
+  margin: 0;
 }
 .press-article dd {
+  margin: 0;
   font-size: 1.2rem;
   color: #878787;
   font-weight: 100;
-  margin-top: 100;
+  margin-top: 10px;
+  line-height: 1.5;
 }
 .pagination-container {
   margin-top: 20px;
   display: flex;
   flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+}
+.pagination li {
+  display: inline-block;
+  color: #878787;
+  margin: 0 5px;
+}
+.pagination a {
+  padding: 0 2px;
+}
+.pagination a.on {
+  font-weight: 700;
+  color: black;
 }
 .button {
   border: none;
@@ -109,14 +128,9 @@
 .button svg path {
   fill: #878787;
 }
-.pagination-container
-.pagination {
-  line-height: 1.5;
-}
-.pagination li {
-  display: inline-block;
-  color: #878787;
-
+.button:hover path,
+.pagination:focus path {
+  fill: darkblue;
 }
 
 
@@ -124,6 +138,12 @@
 @media all and (max-width: 767px) {
   .press-thumbnail {
     display: none;
+  }
+  .press-article dt,
+  .press-article dd {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
   }
 }
 
@@ -141,8 +161,5 @@
     float: left;
     margin: 0;
     margin-right: 15px;
-  }
-  .pagination-container {
-    margin: 0 auto;
   }
 }
